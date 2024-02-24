@@ -41,6 +41,10 @@
     transition: .3s;
     position: sticky;
   }
+  .navbar a:hover {
+    color: #FC4445;
+    cursor: pointer;
+  }
   
   .ag-format-container {
     width: 1142px;

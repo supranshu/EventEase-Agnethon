@@ -1,6 +1,6 @@
 
 
-
+<div class="main">
     <div class="form-container">
         <p class="title">Login</p>
         <form class="form" >
@@ -13,13 +13,16 @@
                 <input type="password" name="password" id="password" [(ngModel)]="loginData.password" required>
                 
             </div>
-            
-            <button (click)="formSubmit()" class="sign">Sign in</button>
+            <div class="button-container">
+                <button (click)="formSubmit()" class="sign">Log in as Student</button>
+                <button (click)="formSubmit()" class="sign">Log in as Admin</button>
+            </div>
         </form>
         <p class="signup">Don't have an account?
             <a rel="noopener noreferrer" routerLink="/signup" class="">Sign up</a>
         </p>
     </div>
+</div>
 
 
 
