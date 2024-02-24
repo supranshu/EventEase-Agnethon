@@ -22,13 +22,16 @@ import { MatSelectModule } from '@angular/material/select';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { Dashboard1Component } from './pages/dashboard1/dashboard1.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    Dashboard1Component
   ],
   imports: [
     BrowserModule,
