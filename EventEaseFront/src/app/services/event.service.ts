@@ -21,4 +21,11 @@ export class EventService {
     console.log(evName)
     return this.http.get<string>(`${baseUrl}/accept/${role}/${evName}`)
   }
+
+  reject(evName:any){
+    const role=localStorage.getItem("role")
+    console.log(role)
+    console.log(evName)
+    return this.http.get<string>(`${baseUrl}/reject/${role}/${evName}`)
+  }
 }

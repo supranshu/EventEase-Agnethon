@@ -41,47 +41,60 @@ public class PermsController {
 	@GetMapping("/accept/{role}/{evName}")
 	@Transactional
 	public ResponseEntity<String> accept(@PathVariable("role")String role, @PathVariable("evName")String evName) {
-		List<Events> ev = eventsRepo.findByEvName(evName);
-		
-		if (!ev.isEmpty() && ev.size() == 1) {
-            Events event = ev.get(0);
-            System.out.println(event);
-            System.out.println(role);
-            System.out.println(evName);
-            
-            switch (role) {
-                case "Principal":
-                    event.setAppPrin(true);
-                    String responseMessage = "Accepted";
-                    return ResponseEntity.ok(responseMessage);
-                    
-                case "Dean":
-                    event.setAppDean(true);
-                    String responseMessage2 = "Accepted";
-                    return ResponseEntity.ok(responseMessage2);
-                case "HOD":
-                    event.setAppHod(true);
-                    String responseMessage3 = "Accepted";
-                    return ResponseEntity.ok(responseMessage3);
-                case "Mentor":
-                    event.setAppMentor(true);
-                    String responseMessage4 = "Accepted";
-                    return ResponseEntity.ok(responseMessage4);
-                default:
-                    System.out.println("Invalid ");
-                    break;
-            }
-            System.out.println("Accepted");
-
-            
-            eventsRepo.save(event);
-        } else {
-        	System.out.println("Rejected");
-            return ResponseEntity.ok("rejected");
-        }
-		System.out.println("Rejected");
-        return ResponseEntity.ok("Rejected");
-		
-		 
+	    List<Events> ev = eventsRepo.findByEvName(evName);
+	    
+	    if (!ev.isEmpty() && ev.size() == 1) {
+	        Events event = ev.get(0);
+	        switch (role) {
+	            case "Principal":
+	                event.setAppPrin(true);
+	                break;
+	            case "Dean":
+	                event.setAppDean(true);
+	                break;
+	            case "HOD":
+	                event.setAppHod(true);
+	                break;
+	            case "Mentor":
+	                event.setAppMentor(true);
+	                break;
+	            default:
+	                return ResponseEntity.badRequest().body("Invalid role");
+	        }
+	        eventsRepo.save(event);
+	        return ResponseEntity.ok().build(); // Return empty response for success
+	    } else {
+	        return ResponseEntity.notFound().build(); // Return 404 if event not found
+	    }
+	}
+	
+	@GetMapping("/reject/{role}/{evName}")
+	@Transactional
+	public ResponseEntity<String> reject(@PathVariable("role")String role, @PathVariable("evName")String evName) {
+	    List<Events> ev = eventsRepo.findByEvName(evName);
+	    
+	    if (!ev.isEmpty() && ev.size() == 1) {
+	        Events event = ev.get(0);
+	        switch (role) {
+	            case "Principal":
+	                event.setAppPrin(false);
+	                break;
+	            case "Dean":
+	                event.setAppDean(false);
+	                break;
+	            case "HOD":
+	                event.setAppHod(false);
+	                break;
+	            case "Mentor":
+	                event.setAppMentor(false);
+	                break;
+	            default:
+	                return ResponseEntity.badRequest().body("Invalid role");
+	        }
+	        eventsRepo.save(event);
+	        return ResponseEntity.ok().build(); // Return empty response for success
+	    } else {
+	        return ResponseEntity.notFound().build(); // Return 404 if event not found
+	    }
 	}
 }

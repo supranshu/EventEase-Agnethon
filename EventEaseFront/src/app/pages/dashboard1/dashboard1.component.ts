@@ -40,20 +40,31 @@ export class Dashboard1Component implements OnInit {
     }
   }
 
-  approveEvent(event: any): void {
-    this.eventService.accept(event).subscribe(
-      (response:string)=>{
-         console.log(response)
+  approveEvent(evName: string): void {
+    // Call the service method to approve the event
+    this.eventService.accept(evName).subscribe(
+      () => {
+        this.snack.open('Event Rejected Successfully', '', { duration: 3000 });
+        this.events = this.events.filter(event => event.evName !== evName);
       },
-      (error)=>{
-        console.log(error)
+      (error) => {
+        console.error('Error approving event:', error);
+        this.snack.open('Error approving event', '', { duration: 3000 });
       }
-    )
+    );
   }
+  
 
-  rejectEvent(event: any): void {
-    // Implement event rejection logic
-    console.log('Event rejected:', event);
-    // You can call a service method here to send rejection request to the backend
+  rejectEvent(evName: any): void {
+    this.eventService.reject(evName).subscribe(
+      () => {
+        this.snack.open('Event Rejected Successfully', '', { duration: 3000 });
+        this.events = this.events.filter(event => event.evName !== evName);
+      },
+      (error) => {
+        console.error('Error Rejecting event:', error);
+        this.snack.open('Error Rejecting event', '', { duration: 3000 });
+      }
+    );
   }
 }

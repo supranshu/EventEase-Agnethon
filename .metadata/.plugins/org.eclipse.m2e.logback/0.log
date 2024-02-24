@@ -756,3 +756,13 @@
 2024-02-24 16:12:10,167 [Worker-160: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ss445\OneDrive\Desktop\Agnethon\EventEase\src\test\resources
 2024-02-24 16:27:59,168 [Worker-169: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-02-24 16:27:59,175 [Worker-169: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-02-24 16:27:59,178 [Worker-169: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ss445\OneDrive\Desktop\Agnethon\EventEase\src\test\resources
+2024-02-24 16:40:16,020 [Worker-177: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-02-24 16:40:16,056 [Worker-177: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-02-24 16:40:16,060 [Worker-177: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ss445\OneDrive\Desktop\Agnethon\EventEase\src\test\resources
+2024-02-24 16:40:38,733 [Worker-175: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-02-24 16:40:38,746 [Worker-175: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-02-24 16:40:38,749 [Worker-175: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ss445\OneDrive\Desktop\Agnethon\EventEase\src\test\resources
+2024-02-24 16:44:50,368 [Worker-175: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-02-24 16:44:50,380 [Worker-175: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-02-24 16:44:50,384 [Worker-175: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ss445\OneDrive\Desktop\Agnethon\EventEase\src\test\resources
