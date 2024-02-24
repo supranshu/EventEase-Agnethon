@@ -1,1 +1,28 @@
-<p>login works!</p>
+
+
+
+    <div class="form-container">
+        <p class="title">Login</p>
+        <form class="form" >
+            <div class="input-group">
+                <label for="name">Username</label>
+                <input type="text" name="name" id="name" [(ngModel)]="loginData.name" required>
+            </div>
+            <div class="input-group"> 
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" [(ngModel)]="loginData.password" required>
+                
+            </div>
+            
+            <button (click)="formSubmit()" class="sign">Sign in</button>
+        </form>
+        <p class="signup">Don't have an account?
+            <a rel="noopener noreferrer" routerLink="/signup" class="">Sign up</a>
+        </p>
+    </div>
+
+
+
+
+
+
