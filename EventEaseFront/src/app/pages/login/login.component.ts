@@ -14,8 +14,9 @@ export class LoginComponent {
 
   public loginData={
     name:'',
-    password:''
+    password:'',
   }
+ 
 
   constructor(private http:HttpClient, private snack:MatSnackBar, private router:Router){}
 
@@ -27,12 +28,15 @@ export class LoginComponent {
       });
       return;
     }
-    this.http.get(`${baseUrl}/login/${this.loginData.name}/${this.loginData.password}`, { responseType: 'text' }).subscribe(
-      (role: string) => {
-        if (role.trim() === "false") {
+    this.http.get(`${baseUrl}/login/${this.loginData.name}/${this.loginData.password}`).subscribe(
+      (response:any) => {
+        
+        if (response.role.trim() ==null) {
           this.snack.open("Invalid Credentials", '', { duration: 3000 });
         } else {
           this.router.navigateByUrl("/dashboard1")
+          localStorage.setItem("college",response.college)
+          
           this.snack.open("Login Successful", '', { duration: 3000 });
         }
       },

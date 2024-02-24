@@ -65,7 +65,7 @@ public class HomeController {
 		return this.service.evByComname(comName);
 	}
 	@GetMapping("/login/{username}/{password}")
-	public String putLogin(@PathVariable("username")String name, @PathVariable("password")String password){
+	public User putLogin(@PathVariable("username")String name, @PathVariable("password")String password){
 		
 		return this.service.login(name,password);
 	}
