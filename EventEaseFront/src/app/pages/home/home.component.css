@@ -17,7 +17,7 @@
     align-items: center;
     z-index: 100;
     margin-bottom: 20px;
-    background-color: #000;
+   
   }
   
   /* ********NAVBAR******* */
@@ -45,6 +45,8 @@
   .ag-format-container {
     width: 1142px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
   }
   
   .ag-courses_box {
@@ -68,7 +70,6 @@
     background-color: white;
     overflow: hidden;
     position: relative;
-    z-index: 1;
   }
   
   .ag-courses-item_link:hover,
@@ -174,6 +175,7 @@
     width: 320px;
     margin: 100px auto 0 auto;
     perspective: 1000px;
+    background-color: #000;
     z-index: 1; /* Adjusted z-index */
   }
   
