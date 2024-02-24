@@ -1,3 +1,6 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+
 <header class="header">
     <img src="/assets/EEE.gif" alt="logo" style="width: 120px; height: 120px; margin-right: -30px;">
     <a href="#" class="logo">EVENTEASE</a>
@@ -117,31 +120,28 @@
             </div>
         </div>
     </div>
+
+    <div class="counter-container" style="background-color: #000;">
+        <div class="counter">
+          <img src="/assets/icon_clock.svg" alt="timer" srcset="" class="icon">
+          <h3 data-target="1000" class="count">0</h3>
+          <h6>Event Hours</h6>
+        </div>
+        <div class="counter">
+          <img src="/assets/icon_student.png" alt="Coffee" srcset="" class="icon">
+
+          <h3 data-target="2000" class="count">0</h3>
+          <h6>Students Attended</h6>
+        </div>
+        <div class="counter">
+          <img src="/assets/mentor.png" alt="night" srcset="" class="icon">
+          <h3 data-target="500" class="count">0</h3>
+          <h6>Mentor Sessions</h6>
+        </div>
+      </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular-animate.min.js"></script>
+    <script src="app.js"> </script>
 </section>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-    @property --num {
-        syntax: '<integer>';
-        initial-value: 0;
-        inherits: false;
-    }
-</style>
-<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-<script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                fontFamily: {
-                    inter: ['Inter', 'sans-serif'],
-                },
-            },
-        },
-    };
-</script>
-
-

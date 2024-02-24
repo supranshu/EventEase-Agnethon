@@ -204,4 +204,37 @@
     }
   }
   
- 
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+@media (max-width: 500px) {
+  .counter-container {
+    flex-direction: column;
+  }
+}
+
+.counter {
+  text-align: center;
+}
+
+.counter h3 {
+  padding: 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #FFF;
+}
+
+.counter h6 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  color: #FFF;
+}
+
+.icon {
+  height: 5rem;
+  width: auto;
+}
