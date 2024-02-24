@@ -1,0 +1,30 @@
+package com.eventease.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+import com.eventease.repo.CollegeRepo;
+import com.eventease.repo.CommitteeRepo;
+import com.eventease.repo.EventsRepo;
+import com.eventease.repo.StudentRepo;
+import com.eventease.repo.UserRepo;
+
+@Service
+public class HomeService {
+
+	@Autowired
+	private CollegeRepo collegeRepo;
+	@Autowired
+	private CommitteeRepo committeeRepo;
+	@Autowired
+	private EventsRepo eventsRepo;
+	@Autowired
+	private StudentRepo studentRepo;
+	@Autowired
+	private UserRepo userRepo;
+	
+	
+	
+	
+}

@@ -15,11 +15,8 @@ public class Student {
 	private String userId;
 	private String stdept;
 	private String phoneNumber;
-	@Override
-	public String toString() {
-		return "Student [stId=" + stId + ", username=" + username + ", userId=" + userId + ", stdept=" + stdept
-				+ ", phoneNumber=" + phoneNumber + "]";
-	}
+	private String password;
+	
 	public long getStId() {
 		return stId;
 	}
@@ -50,18 +47,29 @@ public class Student {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	public Student(long stId, String username, String userId, String stdept, String phoneNumber) {
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public Student(long stId, String username, String userId, String stdept, String phoneNumber, String password) {
 		super();
 		this.stId = stId;
 		this.username = username;
 		this.userId = userId;
 		this.stdept = stdept;
 		this.phoneNumber = phoneNumber;
+		this.password = password;
 	}
 	public Student() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
+
+	
+	
 	
 	
 	

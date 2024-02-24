@@ -1,0 +1,41 @@
+package com.eventease.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.eventease.model.Committee;
+import com.eventease.repo.CollegeRepo;
+import com.eventease.repo.CommitteeRepo;
+import com.eventease.repo.EventsRepo;
+import com.eventease.repo.StudentRepo;
+import com.eventease.repo.UserRepo;
+
+@Service
+public class HomeService {
+
+	@Autowired
+	private CollegeRepo collegeRepo;
+	@Autowired
+	private CommitteeRepo committeeRepo;
+	@Autowired
+	private EventsRepo eventsRepo;
+	@Autowired
+	private StudentRepo studentRepo;
+	@Autowired
+	private UserRepo userRepo;
+	
+	
+	public List<Committee> comByComName(String comName){
+		
+		return this.committeeRepo.findByComName(comName);
+	}
+	
+	public List<Committee> comByClgName(String clgName){
+		
+		return this.committeeRepo.findByClgName(clgName);
+	}
+	
+	
+}

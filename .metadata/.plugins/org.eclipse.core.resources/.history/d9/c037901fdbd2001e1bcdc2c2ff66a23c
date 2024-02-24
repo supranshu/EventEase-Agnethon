@@ -1,0 +1,41 @@
+package com.eventease.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.eventease.model.Committee;
+import com.eventease.model.Events;
+import com.eventease.service.HomeService;
+
+@RestController
+public class HomeController {
+	
+	@Autowired
+	private HomeService service;
+
+	@GetMapping("/com-by-com-name")
+	public List<Committee> getComByComName(String comName){
+		return this.service.comByComName(comName);
+	}
+	
+	@GetMapping("/com-by-clg-name")
+	public List<Committee> getComByClgName(String clgName){
+		return this.service.comByClgName(clgName);
+	}
+	@GetMapping("/ev-by-ev-name")
+	public List<Events> getEvByEvName(String evName){
+		return this.service.evByEvname(evName);
+	}
+	@GetMapping("/ev-by-clg-name")
+	public List<Events> getEvByClgName(String clgName){
+		return this.service.evByClgname(clgName);
+	}
+	@GetMapping("/ev-by-com-name")
+	public List<Events> getEvByComName(String comName){
+		return this.service.evByComname(comName);
+	}
+}
