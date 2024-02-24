@@ -6,7 +6,7 @@
   }
   
   .header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -15,9 +15,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
-    margin-bottom: 20px;
-   
+    z-index: 10;
+    background-color: #000;
   }
   
   /* ********NAVBAR******* */
@@ -26,6 +25,7 @@
     color: #fff;
     text-decoration: none;
     font-weight: 600;
+    margin-left: -195px;
   }
   
   .letters {
