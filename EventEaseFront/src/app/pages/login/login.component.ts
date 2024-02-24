@@ -36,7 +36,7 @@ export class LoginComponent {
         } else {
           this.router.navigateByUrl("/dashboard1")
           localStorage.setItem("college",response.college)
-          
+          localStorage.setItem("role",response.role)
           this.snack.open("Login Successful", '', { duration: 3000 });
         }
       },

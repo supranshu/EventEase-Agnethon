@@ -15,5 +15,10 @@ export class EventService {
     return this.http.get<any[]>(`${baseUrl}/ev-by-clg-name/${collegeName}`);
   }
 
-  // Add methods for event approval/rejection if needed
+  accept(evName:any){
+    const role=localStorage.getItem("role")
+    console.log(role)
+    console.log(evName)
+    return this.http.get<string>(`${baseUrl}/accept/${role}/${evName}`)
+  }
 }

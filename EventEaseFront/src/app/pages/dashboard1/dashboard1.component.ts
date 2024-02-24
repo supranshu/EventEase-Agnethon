@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { EventService } from '../../services/event.service';
 
+
+
 @Component({
   selector: 'app-dashboard1',
   templateUrl: './dashboard1.component.html',
@@ -39,9 +41,14 @@ export class Dashboard1Component implements OnInit {
   }
 
   approveEvent(event: any): void {
-    // Implement event approval logic
-    console.log('Event approved:', event);
-    // You can call a service method here to send approval request to the backend
+    this.eventService.accept(event).subscribe(
+      (response:string)=>{
+         console.log(response)
+      },
+      (error)=>{
+        console.log(error)
+      }
+    )
   }
 
   rejectEvent(event: any): void {
