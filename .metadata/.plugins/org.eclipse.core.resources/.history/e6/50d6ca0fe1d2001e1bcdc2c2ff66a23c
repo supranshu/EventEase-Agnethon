@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.eventease.model.Committee;
 import com.eventease.model.Events;
-import com.eventease.model.Student;
 import com.eventease.model.User;
 import com.eventease.repo.CollegeRepo;
 import com.eventease.repo.CommitteeRepo;
@@ -66,12 +65,11 @@ public class HomeController {
 		return this.service.login(user);
 	}
 	
-	
 	@PostMapping("/sign-up")
-	public Student signUp(@RequestBody Student student) {
+	public User signUp(@RequestBody User user) {
 		
-		
-		return this.studentRepo.save(student);
+		user.setRole("Student");
+		return this.userRepo.save(user);
 	}
 	
 	@PostMapping("upload-event/{comName}/{clgName}")
@@ -88,7 +86,5 @@ public class HomeController {
 		com.setClgName(clgName);
 		return this.committeeRepo.save(com);
 	}
-	
-	
 	
 }
