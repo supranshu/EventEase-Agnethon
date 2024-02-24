@@ -60,7 +60,7 @@ public class HomeController {
 	public List<Events> getEvByClgName(@PathVariable("clgName")String clgName){
 		return this.service.evByClgname(clgName);
 	}
-	@GetMapping("/ev-by-com-name/{comName}")
+	@GetMapping("/ev-by-com-name/{comName}") 
 	public List<Events> getEvByComName(@PathVariable("comName")String comName){
 		return this.service.evByComname(comName);
 	}

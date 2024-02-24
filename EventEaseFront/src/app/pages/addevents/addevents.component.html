@@ -1,0 +1,30 @@
+<section style="background-color: #000;">
+    <div class="content">
+      <br><br><br><br><br><br>
+      <div class="main">
+        <div class="form-container">
+          <p class="title">Add New Event</p>
+          <form class="form">
+            <div class="input-group">
+              <label for="eventName">Event Name</label>
+              <input type="text" name="eventName" id="eventName" [(ngModel)]="eventData.evName" placeholder="">
+            </div>
+            <div class="input-group">
+              <label for="date">Date</label>
+              <input type="text" name="date" id="date" [(ngModel)]="eventData.date" placeholder="">
+            </div>
+            <div class="input-group">
+              <label for="time">Time</label>
+              <input type="text" name="time" id="time" [(ngModel)]="eventData.time" placeholder="">
+            </div>
+            <div class="input-group">
+              <label for="venue">Venue</label>
+              <input type="text" name="venue" id="venue" [(ngModel)]="eventData.venue" placeholder="">
+            </div>
+            <button type="submit" (click)="addEvent()" class="sign">Add Event</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
