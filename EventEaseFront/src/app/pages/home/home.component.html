@@ -8,8 +8,7 @@
         <a href="#">Contact</a>
         <button type="button" routerLink="/login"
             style="margin-left: 100px; background-color: #FC4445; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; text-transform: uppercase;">Login</button>
-    </nav>
-        
+    </nav> 
 </header>
 
 <section>
@@ -119,4 +118,30 @@
         </div>
     </div>
 </section>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    @property --num {
+        syntax: '<integer>';
+        initial-value: 0;
+        inherits: false;
+    }
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    inter: ['Inter', 'sans-serif'],
+                },
+            },
+        },
+    };
+</script>
+
 

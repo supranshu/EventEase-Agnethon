@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     <h2>Events</h2>
     <div *ngFor="let event of events">
       <div class="event-card">
@@ -12,5 +12,31 @@
       </div>
       <hr>
     </div>
-  </div>
+  </div> -->
   
+<section style="background-color: black;">
+  <div class="ag-format-container">
+    <div class="ag-courses_box">
+        <div *ngFor="let event of events" class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link">
+                <div class="ag-courses-item_bg"></div>
+                <div class="ag-courses-item_title">
+                    <br>{{ event.evName }} BY {{ event.comName }}
+                </div>
+                <div class="ag-courses-item_date-box">
+                    <span class="ag-courses-item_date">{{ event.date }}</span>
+                    <br>
+                    <span class="ag-courses-item_date">{{ event.time }}</span>
+                    <br>
+                    <span class="ag-courses-item_date">AT {{ event.venue }}</span>
+                </div>
+                <br>
+                <button mat-button color="primary" (click)="approveEvent(event.evName)" style="background-color: lightskyblue; color: black;" onmouseover="this.style.backgroundColor='lightgreen';" onmouseout="this.style.backgroundColor='lightskyblue';">Approve</button> 
+                <span style="margin-left: 10px;"></span>
+                <button mat-button color="warn" (click)="rejectEvent(event.evName)" style="background-color: yellow; color: black;" onmouseover="this.style.backgroundColor='lightcoral';" onmouseout="this.style.backgroundColor='yellow';">Reject</button>
+            </a>
+        </div>
+    </div>
+  </div>
+</section>
+

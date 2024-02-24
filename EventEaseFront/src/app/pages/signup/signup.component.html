@@ -1,40 +1,51 @@
-
-<body>
-    
-    <div class="form-container">
-        <p class="title">SignUp</p>
-        <form class="form">
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username" placeholder="">
+<section style="background-color: #000;">
+    <header class="header">
+        <img src="/assets/EEE.gif" alt="logo" style="width: 120px; height: 120px; margin-right: -30px;">
+        <a href="#" class="logo">EVENTEASE</a>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Committies</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <div class="content">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="main">
+            <div class="form-container">
+                <p class="title">SignUp</p>
+                <form class="form">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" placeholder="">
+                    </div>
+                    <div class="input-group">
+                        <label for="collegeID">College ID</label>
+                        <input type="text" name="collegeID" id="collegeID" placeholder="">
+                    </div>
+                    <div class="input-group">
+                        <label for="department">Department</label>
+                        <input type="text" name="department" id="department" placeholder="">
+                    </div>
+                    <div class="input-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="text" name="phoneNumber" id="phoneNumber" placeholder="">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="">
+                    </div>
+                    <button type="submit" class="sign">Sign in</button>
+                </form>
+                <p class="signup">Don't have an account?
+                    <a rel="noopener noreferrer" routerLink="/signup" class="">Sign up</a>
+                </p>
             </div>
-            <div class="input-group">
-                <label for="username">College ID</label>
-                <input type="text" name="username" id="username" placeholder="">
-            </div>
-            <div class="input-group">
-                <label for="username">Department</label>
-                <input type="text" name="username" id="username" placeholder="">
-            </div>
-            <div class="input-group">
-                <label for="username">Phone Number</label>
-                <input type="text" name="username" id="username" placeholder="">
-            </div>
-            <div class="input-group"> 
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="">
-                
-            </div>
-            
-            <button type="submit" class="sign">Sign in</button>
-        </form>
-        <p class="signup">Don't have an account?
-            <a rel="noopener noreferrer" routerLink="/signup" class="">Sign up</a>
-        </p>
+        </div>
     </div>
-
-
-
-
-
-</body>
+</section>
