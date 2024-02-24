@@ -21,7 +21,7 @@ public class Events {
 	private boolean appDean;
 	private boolean appHod;
 	private boolean appMentor;
-	private boolean comment;
+	private String comment;
 	public long getEvId() {
 		return evId;
 	}
@@ -88,10 +88,10 @@ public class Events {
 	public void setAppMentor(boolean appMentor) {
 		this.appMentor = appMentor;
 	}
-	public boolean isComment() {
+	public String isComment() {
 		return comment;
 	}
-	public void setComment(boolean comment) {
+	public void setComment(String comment) {
 		this.comment = comment;
 	}
 	@Override
@@ -101,7 +101,7 @@ public class Events {
 				+ ", appHod=" + appHod + ", appMentor=" + appMentor + ", comment=" + comment + "]";
 	}
 	public Events(long evId, String evName, String comName, String date, String time, String venue, String clgName,
-			boolean appPrin, boolean appDean, boolean appHod, boolean appMentor, boolean comment) {
+			boolean appPrin, boolean appDean, boolean appHod, boolean appMentor, String comment) {
 		super();
 		this.evId = evId;
 		this.evName = evName;

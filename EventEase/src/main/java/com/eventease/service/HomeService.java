@@ -61,20 +61,20 @@ public class HomeService {
 	}
 	
 	//fetch a users after logging in role
-	public String login(String name,String password) {
+	public User login(String name,String password) {
 		
 		Optional<User> optUser = Optional.of(userRepo.findByName(name));
 		
 		if(optUser.isPresent()) {
 			User user1=optUser.get();
 			if(password.equals(user1.getPassword())){
-				return user1.getRole();
+				return user1;
 			}else {
-				return "false";
+				return null;
 			}
 		}
 		else {
-			return "false";
+			return null;
 		}
 	}
 	
