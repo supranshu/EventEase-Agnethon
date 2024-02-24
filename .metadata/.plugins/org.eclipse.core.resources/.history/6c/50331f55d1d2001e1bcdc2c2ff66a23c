@@ -1,0 +1,9 @@
+package com.eventease.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.eventease.model.College;
+
+public interface CollegeRepo extends JpaRepository<College, Long> {
+
+}

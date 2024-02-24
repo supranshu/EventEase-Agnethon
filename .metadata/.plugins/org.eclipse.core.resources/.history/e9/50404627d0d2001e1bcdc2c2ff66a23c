@@ -1,0 +1,8 @@
+package com.eventease.model;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Committee {
+ 
+}
