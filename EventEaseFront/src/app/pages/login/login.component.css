@@ -1,4 +1,8 @@
-body{
+*{
+  font-family: "Open Sans", sans-serif;
+}
+
+.main{
     padding-left: 180px;
     padding-right: 180px;
     padding-top: 50px;
@@ -6,7 +10,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
+  margin-top: 100px;
 }
 
 .form-container {
@@ -79,6 +83,16 @@ box-shadow: 0px 0px 202px 9px rgba(158,30,30,0.25);
   
   .sign {
     display: block;
+    
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center; 
+  }
+  
+  .button-container button {
+    margin: 0 5px; 
     width: 100%;
     background-color: #FC4445;
     padding: 0.75rem;
@@ -88,8 +102,10 @@ box-shadow: 0px 0px 202px 9px rgba(158,30,30,0.25);
     border-radius: 0.375rem;
     font-weight: 600;
     margin-bottom: 20px;
+
   }
   
+
   .social-message {
     display: flex;
     align-items: center;
