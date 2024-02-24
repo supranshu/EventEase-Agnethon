@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.eventease.model.Committee;
 import com.eventease.model.Events;
+import com.eventease.model.Student;
 import com.eventease.model.User;
 import com.eventease.repo.CollegeRepo;
 import com.eventease.repo.CommitteeRepo;
@@ -60,13 +61,13 @@ public class HomeService {
 	}
 	
 	//fetch a users after logging in role
-	public String login(User user) {
+	public String login(String name,String password) {
 		
-		Optional<User> optUser = Optional.of(userRepo.findByName(user.getName()));
+		Optional<User> optUser = Optional.of(userRepo.findByName(name));
 		
 		if(optUser.isPresent()) {
 			User user1=optUser.get();
-			if(user.getPassword().equals(user1.getPassword())){
+			if(password.equals(user1.getPassword())){
 				return user1.getRole();
 			}else {
 				return "false";
@@ -74,6 +75,22 @@ public class HomeService {
 		}
 		else {
 			return "false";
+		}
+	}
+	
+	public boolean stLogin(Student st) {
+		Optional<Student> optSt=Optional.of(studentRepo.findByUsername(st.getUsername()));
+		if(optSt.isPresent()) {
+			Student st1=optSt.get();
+			if(st.getPassword().equals(st1.getPassword())) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+		else {
+			return false;
 		}
 	}
 	

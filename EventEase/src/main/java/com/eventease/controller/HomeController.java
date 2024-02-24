@@ -3,10 +3,12 @@ package com.eventease.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.eventease.model.Committee;
@@ -20,10 +22,11 @@ import com.eventease.repo.StudentRepo;
 import com.eventease.repo.UserRepo;
 import com.eventease.service.HomeService;
 
-import io.micrometer.observation.Observation.Event;
-import jakarta.persistence.criteria.Path;
+
 
 @RestController
+@CrossOrigin("*")
+@RequestMapping("/eventease")
 public class HomeController {
 	
 	@Autowired
@@ -61,12 +64,16 @@ public class HomeController {
 	public List<Events> getEvByComName(@PathVariable("comName")String comName){
 		return this.service.evByComname(comName);
 	}
-	@PostMapping("/login")
-	public String putLogin(@RequestBody User user){
-		return this.service.login(user);
+	@GetMapping("/login/{username}/{password}")
+	public String putLogin(@PathVariable("username")String name, @PathVariable("password")String password){
+		
+		return this.service.login(name,password);
 	}
 	
-	
+	@PostMapping("/stlogin")
+	public boolean putStLogin(@RequestBody Student st) {
+		return this.service.stLogin(st);
+	}
 	@PostMapping("/sign-up")
 	public Student signUp(@RequestBody Student student) {
 		
