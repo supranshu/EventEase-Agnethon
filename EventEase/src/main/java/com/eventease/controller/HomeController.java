@@ -81,6 +81,11 @@ public class HomeController {
 		return this.studentRepo.save(student);
 	}
 	
+	@PostMapping("/com-user-signup")
+	public User putComUser(@RequestBody User user ) {
+		return this.userRepo.save(user);
+	}
+	
 	@PostMapping("upload-event/{comName}/{clgName}")
 	public Events upEvent(@RequestBody Events event,@PathVariable("comName")String comName,@PathVariable("clgName")String clgName) {
 		event.setComName(comName);

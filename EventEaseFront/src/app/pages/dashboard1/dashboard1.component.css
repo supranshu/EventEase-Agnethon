@@ -2,6 +2,47 @@ body
 {
     background-color: #000;
 }
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 55px;
+    padding-top: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    background-color: #000;
+  }
+  
+  /* ********NAVBAR******* */
+  .logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: -195px;
+  }
+  
+  .letters {
+    font-size: 36px;
+  }
+  
+  .navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    position: sticky;
+  }
+  .navbar a:hover {
+    color: #FC4445;
+    cursor: pointer;
+  }
+  
 .ag-format-container {
     width: 1142px;
     margin: 0 auto;
