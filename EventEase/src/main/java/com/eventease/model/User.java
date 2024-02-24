@@ -13,6 +13,7 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	private String name;
+	private String role;
 	private String college;
 	private String password;
 	public long getId() {
@@ -39,21 +40,25 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public User(long id, String name, String college, String password) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.college = college;
-		this.password = password;
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
 	}
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", college=" + college + ", password=" + password + "]";
+	public User(long id, String name, String role, String college, String password) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.role = role;
+		this.college = college;
+		this.password = password;
 	}
+	
 	
 	
 
