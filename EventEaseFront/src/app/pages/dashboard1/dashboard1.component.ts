@@ -17,12 +17,12 @@ export class Dashboard1Component implements OnInit {
   constructor(private eventService: EventService, private snack: MatSnackBar) { }
 
   ngOnInit(): void {
-    // Fetch events when the component initializes
+    
     this.fetchEvents();
   }
 
   fetchEvents(): void {
-    // Assume collegeName is obtained from localStorage or from login
+    
     const collegeName = localStorage.getItem('college');
     if (collegeName) {
       this.eventService.getEventsByCollege(collegeName).subscribe(
@@ -41,10 +41,10 @@ export class Dashboard1Component implements OnInit {
   }
 
   approveEvent(evName: string): void {
-    // Call the service method to approve the event
+    
     this.eventService.accept(evName).subscribe(
       () => {
-        this.snack.open('Event Rejected Successfully', '', { duration: 3000 });
+        this.snack.open('Event Accepted Successfully', '', { duration: 3000 });
         this.events = this.events.filter(event => event.evName !== evName);
       },
       (error) => {

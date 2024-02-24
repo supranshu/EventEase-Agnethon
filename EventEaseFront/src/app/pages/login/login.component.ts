@@ -34,9 +34,20 @@ export class LoginComponent {
         if (response.role.trim() ==null) {
           this.snack.open("Invalid Credentials", '', { duration: 3000 });
         } else {
-          this.router.navigateByUrl("/dashboard1")
-          localStorage.setItem("college",response.college)
-          localStorage.setItem("role",response.role)
+          if(response.role=='Principal' || response.role=='Dean' || response.role=='Hod' || response.role=='Mentor'){
+            this.router.navigateByUrl("/dashboard1")
+            localStorage.setItem("college",response.college)
+            localStorage.setItem("role",response.role)
+          }
+          else if(response.role=='Committee'){
+            this.router.navigateByUrl("/dashboard2")
+            localStorage.setItem("college",response.college)
+            localStorage.setItem("role",response.role)
+          }
+          else{
+            
+          }
+          
           this.snack.open("Login Successful", '', { duration: 3000 });
         }
       },

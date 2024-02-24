@@ -23,6 +23,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { Dashboard1Component } from './pages/dashboard1/dashboard1.component';
+import { Dashboard2Component } from './pages/dashboard2/dashboard2.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { Dashboard1Component } from './pages/dashboard1/dashboard1.component';
     HomeComponent,
     LoginComponent,
     SignupComponent,
-    Dashboard1Component
+    Dashboard1Component,
+    Dashboard2Component
   ],
   imports: [
     BrowserModule,
