@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
 
 <header class="header">
@@ -6,17 +5,30 @@
     <a href="#" class="logo">EVENTEASE</a>
     <nav class="navbar">
         <a href="#" class="active">Home</a>
-        <a href="#">About</a>
-        <a href="#">Committies</a>
-        <a href="#">Contact</a>
+        <a href="#about">About</a>
+        <a href="#committees">Committiees</a>
+        <a href="#contact">Contact</a>
         <button type="button" routerLink="/login"
             style="margin-left: 100px; background-color: #FC4445; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; text-transform: uppercase;">Login</button>
     </nav> 
 </header>
 
+
 <section>
+
     <div style="background-color: #000;">
         <div class="ag-format-container">
+            <h1 class="logo" style="padding-left: 590px;">WELCOME TO EVENTEASE</h1>
+            <br>
+            <h1 class="logo" style="padding-left: 515px;">YOURS ONLY PLACE FOR EVENTS AT PLACE 🔥</h1>
+            <br>
+            <h1 class="logo" style="padding-left: 348px;">Simplify. Organize. Celebrate 🎉: EventEase for Seamless
+                Campus Events! 🎓✨</h1>
+            <br>
+            <br>
+        </div>
+        <div class="ag-format-container" id="committees">
+            <h2 class="logo" style="padding-left: 657px;">Our Committees</h2>
             <div class="ag-courses_box">
                 <div class="ag-courses_item">
                     <a href="#" class="ag-courses-item_link">
@@ -121,68 +133,44 @@
         </div>
     </div>
 
-    <div class="counter-container" style="background-color: #000;">
+    <div class="counter-container" id="about" style="background-color: #000;">
         <div class="counter">
-          <img src="/assets/icon_clock.svg" alt="timer" srcset="" class="icon">
-          <h3 data-target="1000" class="count">0</h3>
-          <h6>Event Hours</h6>
+            <img src="/assets/icon_clock.svg" alt="timer" srcset="" class="icon">
+            <h3 data-target="1000" class="count">0</h3>
+            <h6>Event Hours</h6>
         </div>
         <div class="counter">
-          <img src="/assets/icon_student.png" alt="Coffee" srcset="" class="icon">
+            <img src="/assets/icon_student.png" alt="Coffee" srcset="" class="icon">
 
-          <h3 data-target="2000" class="count">0</h3>
-          <h6>Students Attended</h6>
+            <h3 data-target="2000" class="count">0</h3>
+            <h6>Students Attended</h6>
         </div>
         <div class="counter">
-          <img src="/assets/mentor.png" alt="night" srcset="" class="icon">
-          <h3 data-target="500" class="count">0</h3>
-          <h6>Mentor Sessions</h6>
+            <img src="/assets/mentor.png" alt="night" srcset="" class="icon">
+            <h3 data-target="500" class="count">0</h3>
+            <h6>Mentor Sessions</h6>
         </div>
-      </div>
 
+        
+    </div>
+    <div id = "contact" class="ag-format-container logo" style="background-color: #000; width: 100%; padding-left: 136px; padding-bottom: 44px;">
+        <br>
+        <br>
+        <h1>Contact Us</h1>
+        <p>Feel free to contact us via email, phone, or visit our office:</p>
+
+        <h2>Email:</h2>
+        <p><a href="mailto:info@eventease.com">infoateventease.com</a></p>
+
+        <h2>Phone:</h2>
+        <p>(123) 456-7890</p>
+
+        <h2>Address:</h2>
+        <p>123 EventEase Street</p>
+        <p>City, State ZIP</p>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular-animate.min.js"></script>
     <script src="app.js"> </script>
-</section>
-
-<section class="home">
-    <div class="slider">
-        <!-- Slide 1 -->
-        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1540630271798-71a62dfed2a6?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=820&ixid=MnwxfDB8MXxyYW5kb218MHx8bWFjYm9vayxpcGhvbmV8fHx8fHwxNjI5Mzc3NDQ5&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920')">
-            <div class="container">
-                <div class="caption">
-                    <h1>1. Trending Products</h1>
-                    <p>Lorem ipsum dummy text goes here.</p>
-                    <a href="">Shop Now</a>
-                </div>
-            </div>
-        </div>
-        <!-- Slide 2 -->
-        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1550340733-4c0bdcfe1187?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80')">
-            <div class="container">
-                <div class="caption">
-                    <h1>2. Trending Products</h1>
-                    <p>Lorem ipsum dummy text goes here.</p>
-                    <a href="">Shop Now</a>
-                </div>
-            </div>
-        </div>
-        <!-- Slide 3 -->
-        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1612801799511-1ee0705f3212?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80')">
-            <div class="container">
-                <div class="caption">
-                    <h1>3. Trending Products</h1>
-                    <p>Lorem ipsum dummy text goes here.</p>
-                    <a href="">Shop Now</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Controls -->
-        <div class="controls">
-            <div class="prev">&lt;</div>
-            <div class="next">&gt;</div>
-        </div>
-    </div>
 </section>
