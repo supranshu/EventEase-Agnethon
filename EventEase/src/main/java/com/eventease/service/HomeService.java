@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.eventease.model.Committee;
@@ -67,6 +68,7 @@ public class HomeService {
 		
 		if(optUser.isPresent()) {
 			User user1=optUser.get();
+			BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 			if(password.equals(user1.getPassword())){
 				return user1;
 			}else {

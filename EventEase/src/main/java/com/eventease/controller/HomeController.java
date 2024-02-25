@@ -3,6 +3,8 @@ package com.eventease.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,6 +30,8 @@ import com.eventease.service.HomeService;
 @CrossOrigin("*")
 @RequestMapping("/eventease")
 public class HomeController {
+	
+	
 	
 	@Autowired
 	private HomeService service;
@@ -82,8 +86,11 @@ public class HomeController {
 	}
 	
 	@PostMapping("/com-user-signup")
-	public User putComUser(@RequestBody User user ) {
-		return this.userRepo.save(user);
+	public User putComUser(@RequestBody User user) {
+	    BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+	    String encodedPassword = encoder.encode(user.getPassword());
+	    user.setPassword(encodedPassword); // Set the encoded password back to the user object
+	    return this.userRepo.save(user);
 	}
 	
 	@PostMapping("upload-event/{comName}/{clgName}")
