@@ -79,10 +79,10 @@ public class HomeController {
 		return this.service.stLogin(st);
 	}
 	@PostMapping("/sign-up")
-	public Student signUp(@RequestBody Student student) {
+	public User signUp(@RequestBody User student) {
 		
 		
-		return this.studentRepo.save(student);
+		return this.userRepo.save(student);
 	}
 	
 	@PostMapping("/com-user-signup")
@@ -107,6 +107,12 @@ public class HomeController {
 		com.setClgName(clgName);
 		return this.committeeRepo.save(com);
 	}
+	
+	@GetMapping("/approved-events")
+    public List<Events> getApprovedEvents() {
+        
+        return eventsRepo.findByAppPrinAndAppDeanAndAppHodAndAppMentor(true, true, true, true);
+    }
 	
 	
 	

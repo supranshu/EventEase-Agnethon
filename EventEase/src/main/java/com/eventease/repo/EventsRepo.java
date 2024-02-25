@@ -13,4 +13,5 @@ public interface EventsRepo extends JpaRepository<Events, Long> {
 	List<Events> findByEvName(String evName);
 	List<Events> findByClgName(String clgName);
 	List<Events> findByComName(String comName);
+	 List<Events> findByAppPrinAndAppDeanAndAppHodAndAppMentor(boolean appPrin, boolean appDean, boolean appHod, boolean appMentor);
 }

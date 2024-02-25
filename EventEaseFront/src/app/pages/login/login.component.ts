@@ -46,8 +46,11 @@ export class LoginComponent {
             localStorage.setItem("role",response.role)
             localStorage.setItem("name",this.loginData.name)
           }
-          else{
-            
+          else if(response.role=='Student'){
+            this.router.navigateByUrl("/dashboard3")
+            localStorage.setItem("college",response.college)
+            localStorage.setItem("role",response.role)
+            localStorage.setItem("name",this.loginData.name)
           }
           
           this.snack.open("Login Successful", '', { duration: 3000 });

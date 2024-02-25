@@ -33,4 +33,8 @@ export class EventService {
     return this.http.get(`${baseUrl}/ev-by-com-name/${comName}`)
 
   }
+  getApprovedEvents(): Observable<any[]> {
+    return this.http.get<any[]>(`${baseUrl}/approved-events`);
+    // Replace '/approved-events' with the appropriate endpoint in your backend
+  }
 }
