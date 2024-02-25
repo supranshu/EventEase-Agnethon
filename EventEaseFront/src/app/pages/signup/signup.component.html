@@ -1,51 +1,65 @@
 <section style="background-color: #000;">
     <header class="header">
-        <img src="/assets/EEE.gif" alt="logo" style="width: 120px; height: 120px; margin-right: -30px;">
-        <a href="#" class="logo">EVENTEASE</a>
-        <nav class="navbar">
-            <a href="#" class="active">Home</a>
-            <a href="#">About</a>
-            <a href="#">Committies</a>
-            <a href="#">Contact</a>
-        </nav>
+      <img src="/assets/EEE.gif" alt="logo" style="width: 120px; height: 120px; margin-right: -30px;">
+      <a href="#" class="logo">EVENTEASE</a>
+      <nav class="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Committees</a>
+        <a href="/contact">Contact</a>
+      </nav>
     </header>
     <div class="content">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="main">
-            <div class="form-container">
-                <p class="title">SignUp</p>
-                <form class="form">
-                    <div class="input-group">
-                        <label for="username">Username</label>
-                        <input type="text" name="username" id="username" placeholder="">
-                    </div>
-                    <div class="input-group">
-                        <label for="collegeID">College ID</label>
-                        <input type="text" name="collegeID" id="collegeID" placeholder="">
-                    </div>
-                    <div class="input-group">
-                        <label for="department">Department</label>
-                        <input type="text" name="department" id="department" placeholder="">
-                    </div>
-                    <div class="input-group">
-                        <label for="phoneNumber">Phone Number</label>
-                        <input type="text" name="phoneNumber" id="phoneNumber" placeholder="">
-                    </div>
-                    <div class="input-group">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password" placeholder="">
-                    </div>
-                    <button type="submit" class="sign">Sign in</button>
-                </form>
-                <p class="signup">Don't have an account?
-                    <a rel="noopener noreferrer" routerLink="/signup" class="">Sign up</a>
-                </p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="main">
+        <div class="form-container">
+          <p class="title">SignUp</p>
+          <form class="form">
+            <div class="input-group">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" placeholder="" [(ngModel)]="user.name">
             </div>
+            <div class="input-group">
+              <label for="collegeID">College ID</label>
+              <input type="text" name="collegeID" id="collegeID" placeholder="" >
+            </div>
+            <div class="input-group">
+                <label for="department">Department</label>
+                <select name="department" id="department" >
+                  <option value="" disabled selected>Select Department</option>
+                  <option value="Computer Science">Computer Science</option>
+                  
+                  <option value="Electrical Engineering">Electrical Engineering</option>
+                  <option value="Mechanical Engineering">Mechanical Engineering</option>
+                  <option value="Information Technology">Information Technology</option>
+                  <option value="Civil Engineering">Civil Engineering</option>
+                  <option value="Mechatronics Engineering">Mechatronics Engineering</option>
+                  <option value="Chemical Engineering">Chemical Engineering</option>
+                  
+                </select>
+              </div>
+            <div class="input-group">
+              <label for="phoneNumber">Phone Number</label>
+              <input type="text" name="phoneNumber" id="phoneNumber" placeholder="" >
+            </div>
+            <div class="input-group">
+              <label for="phocollege">College Name</label>
+              <input type="text" name="phocollege" id="phocollege" placeholder="" [(ngModel)]="user.college" >
+            </div>
+            <div class="input-group">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" placeholder="" [(ngModel)]="user.password">
+            </div>
+            <button type="submit" class="sign" (click)="signUp()">Sign in</button>
+          </form>
+          
         </div>
+      </div>
     </div>
-</section>
+  </section>
+  

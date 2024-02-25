@@ -69,7 +69,7 @@ public class HomeService {
 		if(optUser.isPresent()) {
 			User user1=optUser.get();
 			BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-			if(password.equals(user1.getPassword())){
+	        if (encoder.matches(password, user1.getPassword())){
 				return user1;
 			}else {
 				return null;

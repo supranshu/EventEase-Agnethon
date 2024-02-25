@@ -27,6 +27,8 @@ import { Dashboard2Component } from './pages/dashboard2/dashboard2.component';
 import { AddcommitteeComponent } from './pages/addcommittee/addcommittee.component';
 import { ViewcommitteeComponent } from './pages/viewcommittee/viewcommittee.component';
 import { AddeventsComponent } from './pages/addevents/addevents.component';
+import { Dashboard3Component } from './pages/dashboard3/dashboard3.component';
+import { DevloginComponent } from './pages/devlogin/devlogin.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { AddeventsComponent } from './pages/addevents/addevents.component';
     Dashboard2Component,
     AddcommitteeComponent,
     ViewcommitteeComponent,
-    AddeventsComponent
+    AddeventsComponent,
+    Dashboard3Component,
+    DevloginComponent
   ],
   imports: [
     BrowserModule,
