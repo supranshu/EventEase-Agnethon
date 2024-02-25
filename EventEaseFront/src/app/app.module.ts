@@ -42,8 +42,12 @@ import { DevloginComponent } from './pages/devlogin/devlogin.component';
     AddcommitteeComponent,
     ViewcommitteeComponent,
     AddeventsComponent,
+<<<<<<< HEAD
+    ContactComponent
+=======
     Dashboard3Component,
     DevloginComponent
+>>>>>>> 47a890d610f9d6841c9c9c1d425855e5c99f7b64
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { Dashboard2Component } from './pages/dashboard2/dashboard2.component';
 import { AddcommitteeComponent } from './pages/addcommittee/addcommittee.component';
 import { ViewcommitteeComponent } from './pages/viewcommittee/viewcommittee.component';
 import { AddeventsComponent } from './pages/addevents/addevents.component';
+import { ContactComponent } from './pages/contact/contact.component';
 import { Dashboard3Component } from './pages/dashboard3/dashboard3.component';
 
 const routes: Routes = [
