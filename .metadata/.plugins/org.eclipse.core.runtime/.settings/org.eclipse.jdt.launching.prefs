@@ -1,6 +1,5 @@
+=\=\=\=\=\=\=
+<<<<<<<=Updated upstream
+>>>>>>>=Stashed changes
 eclipse.preferences.version=1
-<<<<<<< Updated upstream
-org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<vmSettings defaultVM\="57,org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType13,1708745882799" defaultVMConnector\="">\r\n    <vmType id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType">\r\n        <vm id\="1708745882799" name\="jre" path\="E\:\\sts-4.18.1.RELEASE\\plugins\\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\\jre"/>\r\n    </vmType>\r\n</vmSettings>\r\n
-=======
-org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<vmSettings defaultVM\="57,org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType13,1708779937431" defaultVMConnector\="">\r\n    <vmType id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType">\r\n        <vm id\="1708779937431" name\="jre" path\="C\:\\Users\\Kunal\\Downloads\\sts-4.21.1.RELEASE\\plugins\\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\\jre"/>\r\n    </vmType>\r\n</vmSettings>\r\n
->>>>>>> Stashed changes
+org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<vmSettings defaultVM\="57,org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType13,1708867980587" defaultVMConnector\="">\r\n    <vmType id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType">\r\n        <vm id\="1708867980587" name\="jre" path\="E\:\\sts-4.18.1.RELEASE\\plugins\\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\\jre"/>\r\n    </vmType>\r\n</vmSettings>\r\n
