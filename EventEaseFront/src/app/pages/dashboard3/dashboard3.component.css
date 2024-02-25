@@ -1,4 +1,10 @@
-/* Add your CSS styles here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 .header {
     position: sticky;
     top: 0;
@@ -40,7 +46,7 @@
 }
 
 .ag-format-container {
-    width: 1142px;
+    width: 100%;
     margin: 0 auto;
     position: relative;
     z-index: 1;
@@ -51,7 +57,21 @@
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 50px 0;
+    text-align: center; /* Center the text horizontally */
 }
+.ag-courses-item_link:hover .ag-courses-item_bg {
+    transform: scale(10); /* Increase the size of the circle */
+}
+
+.ag-courses-item_link:hover .ag-courses-item_title {
+    color: #fff; /* Change the text color to white on hover */
+}
+
+.ag-courses-item_link:hover .ag-courses-item_date {
+    color: #fff; /* Change the date text color to white on hover */
+}
+
+
 
 .ag-courses_item {
     flex: 0 0 calc(33.33333% - 30px);
@@ -73,6 +93,7 @@
 .ag-courses-item_title {
     min-height: 87px;
     margin: 0 0 25px;
+    
     overflow: hidden;
     font-weight: bold;
     font-size: 30px;
@@ -82,6 +103,7 @@
 }
 
 .ag-courses-item_date-box {
+    
     font-size: 18px;
     color: #fff;
     z-index: 2;
@@ -89,6 +111,7 @@
 }
 
 .ag-courses-item_date {
+    
     font-weight: bold;
     color: #f9b234;
     transition: color .5s ease;
