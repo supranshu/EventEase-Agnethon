@@ -1,14 +1,20 @@
 <header class="header">
+    <img src="/assets/EEE.gif" alt="logo" style="width: 120px; height: 120px; margin-right: -30px;">
     <a class="logo">EVENTEASE</a>
     <nav class="navbar">
         <!-- Add any additional links or buttons here -->
-        <button type="button" routerLink="/" style="background-color: #FC4445; margin-left: 15px; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; text-transform: uppercase;">Logout</button>
+        <button type="button" routerLink="/"
+            style="background-color: #FC4445; margin-left: 15px; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; text-transform: uppercase;">Logout</button>
     </nav>
 </header>
 
-<section class="ag-format-container">
+
+<section style="background-color: black; height: 100%;">
+
     <div class="ag-courses_box">
         <div *ngFor="let event of approvedEvents" class="ag-courses_item">
+            <h1 class="logo" style="">&nbsp; List of Active Events</h1>
+            <br>
             <a class="ag-courses-item_link">
                 <div class="ag-courses-item_bg"></div>
                 <div class="ag-courses-item_title">{{ event.evName }}</div>
@@ -23,11 +29,13 @@
                     <br>
                     <span class="ag-courses-item_date">College Name: {{ event.clgName }}</span>
                     <br>
-                    
-                    
-                    
+
+
+
                     <!-- Add registration link button here -->
-                    <button mat-button color="primary" (click)="registerForEvent(event)" style="margin-top: 10px;">Register</button>
+                    <button mat-button color="primary" (click)="registerForEvent(event)"
+                        style="margin-top: 10px; background-color: lightblue; color: red; transition: background-color 0.3s ease;">Register</button>
+
                 </div>
             </a>
         </div>

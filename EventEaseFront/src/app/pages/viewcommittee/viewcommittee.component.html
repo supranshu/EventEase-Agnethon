@@ -1,28 +1,29 @@
 <header class="header">
     <img src="/assets/EEE.gif" alt="logo" style="width: 120px; height: 120px; margin-right: -30px;">
     <a href="#" class="logo">EVENTEASE</a>
-    <nav class="navbar">    
+    <nav class="navbar">
         <a routerLink="/addcommittee">Add Committee</a>
-        
-        <button type="button" routerLink="/" style="margin-left: 100px; background-color: #FC4445; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; text-transform: uppercase;">Logout</button>
+        <a routerLink="/dashboard1">Dashboard</a>
+
+        <button type="button" routerLink="/"
+            style="margin-left: 100px; background-color: #FC4445; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; text-transform: uppercase;">Logout</button>
     </nav>
-  </header>
-  
-  <section style="background-color: black;">
+</header>
+
+<section style="background-color: black; height: 100%;">
     <div class="ag-format-container">
-      <div class="ag-courses_box">
-          <div *ngFor="let committee of committees" class="ag-courses_item">
-              <a class="ag-courses-item_link">
-                  <div class="ag-courses-item_bg"></div>
-                  <div class="ag-courses-item_title">
-                      <br>{{ committee.comName }} - {{ committee.dept }}
-                  </div>
-                  <div class="ag-courses-item_info">
-                      <span class="ag-courses-item_info_text">{{ committee.info }}</span>
-                  </div>
-              </a>
-          </div>
-      </div>
+        <div class="ag-courses_box">
+            <div *ngFor="let committee of committees" class="ag-courses_item">
+                <a class="ag-courses-item_link">
+                    <div class="ag-courses-item_bg"></div>
+                    <div class="ag-courses-item_title">
+                        <br>{{ committee.comName }} - {{ committee.dept }}
+                    </div>
+                    <div class="ag-courses-item_date-box">
+                        <span class="ag-courses-item_date">{{ committee.info }}</span>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
-  </section>
-  
+</section>

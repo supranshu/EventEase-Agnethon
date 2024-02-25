@@ -4,37 +4,39 @@
         <a href="#" class="logo">EVENTEASE</a>
         <nav class="navbar">
             <a href="#" class="active">Home</a>
-            <a href="#">About</a>
-            <a href="#">Committies</a>
-            <a href="#">Contact</a>
+            <a href="#about">About</a>
+            <a href="#committees">Committiees</a>
+            <a href="#contact">Contact</a>
             <!-- <button type="button" routerLink="/login"
                 style="margin-left: 100px; background-color: #FC4445; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; text-transform: uppercase;">Login</button> -->
-        </nav> 
+        </nav>
     </header>
-    
-    <div class="main">
-        <div class="form-container">
-            <p class="title">Login</p>
-            <form class="form" >
-                <div class="input-group">
-                    <label for="name">Username</label>
-                    <input type="text" name="name" id="name" [(ngModel)]="loginData.name" required>
-                </div>
-                <div class="input-group"> 
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" [(ngModel)]="loginData.password" required>
-                    
-                </div>
-                <div class="button-container">
-                    
-                    <button (click)="formSubmit()" class="sign">Log in</button>
-                </div>
-            </form>
-            <p class="signup">Don't have an account?
-                <a rel="noopener noreferrer" routerLink="/signup" class="">Sign up</a>
-            </p>
+    <section style="height: 100%; background-color: #000;">
+        <div class="main">
+            <div class="form-container">
+                <p class="title">Login</p>
+                <form class="form" >
+                    <div class="input-group">
+                        <label for="name">Username</label>
+                        <input type="text" name="name" id="name" [(ngModel)]="loginData.name" required>
+                    </div>
+                    <div class="input-group"> 
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" [(ngModel)]="loginData.password" required>
+                        
+                    </div>
+                    <div class="button-container">
+                        
+                        <button (click)="formSubmit()" class="sign">Log in</button>
+                    </div>
+                </form>
+                <p class="signup">Don't have an account?
+                    <a rel="noopener noreferrer" routerLink="/signup" class="">Sign up</a>
+                </p>
+            </div>
         </div>
-    </div>
+    </section>
+    
 </section>
 
 

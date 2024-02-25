@@ -1,50 +1,51 @@
 <header class="header">
-    <a  class="logo">EVENTEASE</a>
-    <nav class="navbar">
-      <a routerLink="/addevents">Add Event</a> 
-      <button type="button" routerLink="/" style="background-color: #FC4445; margin-left: 15px; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; text-transform: uppercase;">Logout</button>
-    </nav>
-  </header>
-  
-  <section class="ag-format-container">
-    <div class="ag-courses_box">
-      <div *ngFor="let event of events" class="ag-courses_item">
-        <a class="ag-courses-item_link">
-          <div class="ag-courses-item_bg"></div>
-          <div class="ag-courses-item_title">{{ event.evName }}</div>
-          <div class="ag-courses-item_date-box">
-            <span class="ag-courses-item_date">Committee Name: {{ event.comName }}</span>
-            <br>
-            <span class="ag-courses-item_date">Date: {{ event.date }}</span>
-            <br>
-            <span class="ag-courses-item_date">Time: {{ event.time }}</span>
-            <br>
-            <span class="ag-courses-item_date">Venue: {{ event.venue }}</span>
-            <br>
-            <span class="ag-courses-item_date">College Name: {{ event.clgName }}</span>
-            <br>
-            <span class="ag-courses-item_date">Approval Status:</span>
-            <div>
-              <span *ngIf="event.appPrin" style="color: green;">Principal Approved</span>
-              <span *ngIf="!event.appPrin" style="color: red;">Principal Not Approved</span>
-            </div>
-            <div>
-              <span *ngIf="event.appDean" style="color: green;">Dean Approved</span>
-              <span *ngIf="!event.appDean" style="color: red;">Dean Not Approved</span>
-            </div>
-            <div>
-              <span *ngIf="event.appHod" style="color: green;">HOD Approved</span>
-              <span *ngIf="!event.appHod" style="color: red;">HOD Not Approved</span>
-            </div>
-            <div>
-              <span *ngIf="event.appMentor" style="color: green;">Mentor Approved</span>
-              <span *ngIf="!event.appMentor" style="color: red;">Mentor Not Approved</span>
-            </div>
-            <br>
-            <span class="ag-courses-item_date">Comments: {{ event.comment }}</span>
+  <img src="/assets/EEE.gif" alt="logo" style="width: 120px; height: 120px; margin-right: -30px;">
+  <a class="logo">EVENTEASE</a>
+  <nav class="navbar">
+    <a routerLink="/addevents">Add Event</a>
+    <button type="button" routerLink="/"
+      style="background-color: #FC4445; margin-left: 15px; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; text-transform: uppercase;">Logout</button>
+  </nav>
+</header>
+
+<section class="ag-format-container">
+  <div class="ag-courses_box">
+    <div *ngFor="let event of events" class="ag-courses_item">
+      <a class="ag-courses-item_link">
+        <div class="ag-courses-item_bg"></div>
+        <div class="ag-courses-item_title">{{ event.evName }}</div>
+        <div class="ag-courses-item_date-box">
+          <span class="ag-courses-item_date">Committee Name: {{ event.comName }}</span>
+          <br>
+          <span class="ag-courses-item_date">Date: {{ event.date }}</span>
+          <br>
+          <span class="ag-courses-item_date">Time: {{ event.time }}</span>
+          <br>
+          <span class="ag-courses-item_date">Venue: {{ event.venue }}</span>
+          <br>
+          <span class="ag-courses-item_date">College Name: {{ event.clgName }}</span>
+          <br>
+          <span class="ag-courses-item_date">Approval Status:</span>
+          <div>
+            <span *ngIf="event.appPrin" style="color: green;">Principal Approved</span>
+            <span *ngIf="!event.appPrin" style="color: red;">Principal Not Approved</span>
           </div>
-        </a>
-      </div>
+          <div>
+            <span *ngIf="event.appDean" style="color: green;">Dean Approved</span>
+            <span *ngIf="!event.appDean" style="color: red;">Dean Not Approved</span>
+          </div>
+          <div>
+            <span *ngIf="event.appHod" style="color: green;">HOD Approved</span>
+            <span *ngIf="!event.appHod" style="color: red;">HOD Not Approved</span>
+          </div>
+          <div>
+            <span *ngIf="event.appMentor" style="color: green;">Mentor Approved</span>
+            <span *ngIf="!event.appMentor" style="color: red;">Mentor Not Approved</span>
+          </div>
+          <br>
+          <span class="ag-courses-item_date">Comments: {{ event.comment }}</span>
+        </div>
+      </a>
     </div>
-  </section>
-  
+  </div>
+</section>
