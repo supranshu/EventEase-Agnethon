@@ -18,7 +18,6 @@
     <fullyQualifiedTypeName name="com.eventease.repo.StudentRepo"/>
     <fullyQualifiedTypeName name="com.eventease.repo.UserRepo"/>
     <fullyQualifiedTypeName name="jakarta.persistence.criteria.Path"/>
-    <fullyQualifiedTypeName name="com.eventease.model.Events"/>
     <fullyQualifiedTypeName name="com.eventease.repo.CommitteeRepo"/>
     <fullyQualifiedTypeName name="com.eventease.model.Committee"/>
     <fullyQualifiedTypeName name="com.eventease.model.Student"/>
@@ -26,7 +25,6 @@
     <fullyQualifiedTypeName name="java.util.Optional"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="jakarta.transaction.Transactional"/>
     <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
@@ -38,6 +36,8 @@
     <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.EnableAutoConfiguration"/>
     <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration"/>
     <fullyQualifiedTypeName name="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="com.eventease.model.Events"/>
 </qualifiedTypeNameHistroy>
 =======
 <qualifiedTypeNameHistroy/>

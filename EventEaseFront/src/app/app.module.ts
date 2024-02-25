@@ -43,11 +43,11 @@ import { DevloginComponent } from './pages/devlogin/devlogin.component';
     ViewcommitteeComponent,
     AddeventsComponent,
     Dashboard3Component,
-    DevloginComponent
+    DevloginComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, MatButtonModule,MatIconModule,MatInputModule,MatFormFieldModule,MatSnackBarModule, MatCardModule,MatToolbarModule, MatListModule,MatGridListModule,FormsModule,HttpClientModule, CommonModule, BrowserAnimationsModule, MatSelectModule, MatMenuModule
+    AppRoutingModule, MatButtonModule,MatIconModule,MatInputModule,MatFormFieldModule,MatSnackBarModule, MatCardModule,MatToolbarModule, MatListModule,MatGridListModule,FormsModule,HttpClientModule, CommonModule, BrowserAnimationsModule, MatSelectModule, MatMenuModule, 
   ],
   providers: [
     provideClientHydration(),

@@ -23,25 +23,8 @@
                     <br>
                     <span class="ag-courses-item_date">College Name: {{ event.clgName }}</span>
                     <br>
-                    <span class="ag-courses-item_date">Approval Status:</span>
-                    <div>
-                        <span *ngIf="event.appPrin" style="color: green;">Principal Approved</span>
-                        <span *ngIf="!event.appPrin" style="color: red;">Principal Not Approved</span>
-                    </div>
-                    <div>
-                        <span *ngIf="event.appDean" style="color: green;">Dean Approved</span>
-                        <span *ngIf="!event.appDean" style="color: red;">Dean Not Approved</span>
-                    </div>
-                    <div>
-                        <span *ngIf="event.appHod" style="color: green;">HOD Approved</span>
-                        <span *ngIf="!event.appHod" style="color: red;">HOD Not Approved</span>
-                    </div>
-                    <div>
-                        <span *ngIf="event.appMentor" style="color: green;">Mentor Approved</span>
-                        <span *ngIf="!event.appMentor" style="color: red;">Mentor Not Approved</span>
-                    </div>
-                    <br>
-                    <span class="ag-courses-item_date">Comments: {{ event.comment }}</span>
+                    
+                    
                     
                     <!-- Add registration link button here -->
                     <button mat-button color="primary" (click)="registerForEvent(event)" style="margin-top: 10px;">Register</button>
