@@ -1,1 +1,43 @@
-<p>devlogin works!</p>
+<section style="background-color: #000;">
+    
+    <div class="content">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="main">
+        <div class="form-container">
+          <p class="title">SignUp</p>
+          <form class="form">
+            <div class="input-group">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" placeholder="" [(ngModel)]="user.name">
+            </div>
+            <div class="input-group">
+              <label for="role">Role</label>
+              <select name="role" id="role" [(ngModel)]="user.role">
+                <option value="" disabled selected>Select Role</option>
+                <option value="Student">Student</option>
+                <option value="Principal">Principal</option>
+                <option value="Dean">Dean</option>
+                <option value="Hod">HOD</option>
+                <option value="Mentor">Mentor</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="college">College</label>
+              <input type="text" name="college" id="college" placeholder="" [(ngModel)]="user.college">
+            </div>
+            <div class="input-group">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" placeholder="" [(ngModel)]="user.password">
+            </div>
+            <button type="submit" (click)="signup()" class="sign">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
