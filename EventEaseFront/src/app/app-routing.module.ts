@@ -5,6 +5,9 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { Dashboard1Component } from './pages/dashboard1/dashboard1.component';
 import { Dashboard2Component } from './pages/dashboard2/dashboard2.component';
+import { AddcommitteeComponent } from './pages/addcommittee/addcommittee.component';
+import { ViewcommitteeComponent } from './pages/viewcommittee/viewcommittee.component';
+import { AddeventsComponent } from './pages/addevents/addevents.component';
 
 const routes: Routes = [
   {
@@ -30,6 +33,21 @@ const routes: Routes = [
   {
     path:"dashboard2",
     component:Dashboard2Component,
+    pathMatch:'full'
+  },
+  {
+    path:"addcommittee",
+    component:AddcommitteeComponent,
+    pathMatch:'full'
+  },
+  {
+    path:"viewcommittee",
+    component:ViewcommitteeComponent,
+    pathMatch:'full'
+  },
+  {
+    path:"addevents",
+    component:AddeventsComponent,
     pathMatch:'full'
   }
 ];

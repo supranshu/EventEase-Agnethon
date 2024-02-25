@@ -1,24 +1,20 @@
-<!-- <div>
-    <h2>Events</h2>
-    <div *ngFor="let event of events">
-      <div class="event-card">
-        <p><strong>Name:</strong> {{ event.evName }}</p>
-        <p><strong>Date:</strong> {{ event.date }}</p>
-        <p><strong>Time:</strong> {{ event.time }}</p>
-        <p><strong>Venue:</strong> {{ event.venue }}</p>
-        <p><strong>Committee Name:</strong> {{ event.comName }}</p>
-        <button mat-button color="primary" (click)="approveEvent(event.evName)">Approve</button>
-        <button mat-button color="warn" (click)="rejectEvent(event.evName)">Reject</button>
-      </div>
-      <hr>
-    </div>
-  </div> -->
-  
+
+<header class="header">
+  <img src="/assets/EEE.gif" alt="logo" style="width: 120px; height: 120px; margin-right: -30px;">
+  <a  class="logo">EVENTEASE</a>
+  <nav class="navbar">
+      
+      <a routerLink="/addcommittee" >Add Committee</a>
+      <a routerLink="/viewcommittee" >View All Committees</a>
+      <button type="button" routerLink="/"
+          style="margin-left: 100px; background-color: #FC4445; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; text-transform: uppercase;">Logout</button>
+  </nav>  
+</header>
 <section style="background-color: black;">
   <div class="ag-format-container">
     <div class="ag-courses_box">
         <div *ngFor="let event of events" class="ag-courses_item">
-            <a href="#" class="ag-courses-item_link">
+            <a  class="ag-courses-item_link">
                 <div class="ag-courses-item_bg"></div>
                 <div class="ag-courses-item_title">
                     <br>{{ event.evName }} BY {{ event.comName }}

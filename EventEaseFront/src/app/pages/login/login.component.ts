@@ -38,11 +38,13 @@ export class LoginComponent {
             this.router.navigateByUrl("/dashboard1")
             localStorage.setItem("college",response.college)
             localStorage.setItem("role",response.role)
+            localStorage.setItem("name",this.loginData.name) 
           }
           else if(response.role=='Committee'){
             this.router.navigateByUrl("/dashboard2")
             localStorage.setItem("college",response.college)
             localStorage.setItem("role",response.role)
+            localStorage.setItem("name",this.loginData.name)
           }
           else{
             

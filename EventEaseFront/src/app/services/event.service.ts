@@ -28,4 +28,9 @@ export class EventService {
     console.log(evName)
     return this.http.get<string>(`${baseUrl}/reject/${role}/${evName}`)
   }
+
+  getEventsByCommittee(comName:any){
+    return this.http.get(`${baseUrl}/ev-by-com-name/${comName}`)
+
+  }
 }

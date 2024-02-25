@@ -1,0 +1,35 @@
+<section style="background-color: #000;">
+    <div class="content">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="main">
+            <div class="form-container">
+                <p class="title">Add New Committee For Your College</p>
+                <form class="form">
+                    <div class="input-group">
+                        <label for="comName">Committee Name</label>
+                        <input type="text" name="comName" id="comName" placeholder="" [(ngModel)]="comData.comName" [(ngModel)]="userData.name">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="dept">Department</label>
+                        <input type="text" name="dept" id="dept" placeholder="" [(ngModel)]="comData.dept">
+                    </div>
+                    <div class="input-group">
+                        <label for="info">Information About Committee</label>
+                        <input type="text" name="info" id="info" placeholder="" [(ngModel)]="comData.info">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="" [(ngModel)]="userData.password">
+                    </div>
+                    <button type="submit" (click)="addCommittee()" class="sign">Add Committee</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
