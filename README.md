@@ -4,11 +4,14 @@ EventEase is a web application for managing events and approvals within a colleg
 
 ## Implementations till now
 
-- **HomePage and Login**
-- **Dashboard According to the individual role of the user loggedIn**
+- **Total 8 Components 🔥**
+- **Dashboard According to the individual role of the user loggedIn E.g Committee , principal, dean,etc**
 - **Approval Workflow**: Manage event approvals based on roles such as Principal, Dean, HOD, and Mentor.
 - **User Authentication**: Secure login and authentication system for different user roles.
+- **Encrypting of password as said by the mentor in 1st interaction**
+- **Optimized the frontend as said by the mentor in 1st interaction**
 - **Responsive Design**: Mobile-friendly interface for easy access on any device.
+- 
 
 ## Technologies Used
 

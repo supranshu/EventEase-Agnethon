@@ -1,3 +1,6 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+
 <header class="header">
     <img src="/assets/EEE.gif" alt="logo" style="width: 120px; height: 120px; margin-right: -30px;">
     <a href="#" class="logo">EVENTEASE</a>
@@ -117,31 +120,69 @@
             </div>
         </div>
     </div>
+
+    <div class="counter-container" style="background-color: #000;">
+        <div class="counter">
+          <img src="/assets/icon_clock.svg" alt="timer" srcset="" class="icon">
+          <h3 data-target="1000" class="count">0</h3>
+          <h6>Event Hours</h6>
+        </div>
+        <div class="counter">
+          <img src="/assets/icon_student.png" alt="Coffee" srcset="" class="icon">
+
+          <h3 data-target="2000" class="count">0</h3>
+          <h6>Students Attended</h6>
+        </div>
+        <div class="counter">
+          <img src="/assets/mentor.png" alt="night" srcset="" class="icon">
+          <h3 data-target="500" class="count">0</h3>
+          <h6>Mentor Sessions</h6>
+        </div>
+      </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular-animate.min.js"></script>
+    <script src="app.js"> </script>
 </section>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-    @property --num {
-        syntax: '<integer>';
-        initial-value: 0;
-        inherits: false;
-    }
-</style>
-<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-<script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                fontFamily: {
-                    inter: ['Inter', 'sans-serif'],
-                },
-            },
-        },
-    };
-</script>
+<section class="home">
+    <div class="slider">
+        <!-- Slide 1 -->
+        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1540630271798-71a62dfed2a6?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=820&ixid=MnwxfDB8MXxyYW5kb218MHx8bWFjYm9vayxpcGhvbmV8fHx8fHwxNjI5Mzc3NDQ5&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920')">
+            <div class="container">
+                <div class="caption">
+                    <h1>1. Trending Products</h1>
+                    <p>Lorem ipsum dummy text goes here.</p>
+                    <a href="">Shop Now</a>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1550340733-4c0bdcfe1187?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80')">
+            <div class="container">
+                <div class="caption">
+                    <h1>2. Trending Products</h1>
+                    <p>Lorem ipsum dummy text goes here.</p>
+                    <a href="">Shop Now</a>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1612801799511-1ee0705f3212?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80')">
+            <div class="container">
+                <div class="caption">
+                    <h1>3. Trending Products</h1>
+                    <p>Lorem ipsum dummy text goes here.</p>
+                    <a href="">Shop Now</a>
+                </div>
+            </div>
+        </div>
 
-
+        <!-- Controls -->
+        <div class="controls">
+            <div class="prev">&lt;</div>
+            <div class="next">&gt;</div>
+        </div>
+    </div>
+</section>

@@ -204,4 +204,84 @@
     }
   }
   
- 
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+@media (max-width: 500px) {
+  .counter-container {
+    flex-direction: column;
+  }
+}
+
+.counter {
+  text-align: center;
+}
+
+.counter h3 {
+  padding: 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #FFF;
+}
+
+.counter h6 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  color: #FFF;
+}
+
+.icon {
+  height: 5rem;
+  width: auto;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  cursor: pointer;
+}
+
+.prev, .next {
+  color: #fff;
+  font-size: 24px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
