@@ -62,6 +62,8 @@ The backend is built on the Spring Boot framework.
 
 MySQL is used as the database management system to store event data, including tables for events, users, and roles.
 
+### Youtube Link: https://www.youtube.com/watch?v=aHJsCIMO8fg
+
 ## Getting Started
 
 To run the application locally, follow these steps:
