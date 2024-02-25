@@ -52,7 +52,7 @@ public class PermsController {
 	            case "Dean":
 	                event.setAppDean(true);
 	                break;
-	            case "HOD":
+	            case "Hod":
 	                event.setAppHod(true);
 	                break;
 	            case "Mentor":
@@ -82,7 +82,7 @@ public class PermsController {
 	            case "Dean":
 	                event.setAppDean(false);
 	                break;
-	            case "HOD":
+	            case "Hod":
 	                event.setAppHod(false);
 	                break;
 	            case "Mentor":
