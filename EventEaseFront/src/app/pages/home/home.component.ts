@@ -1,11 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit 
+{
+  slides: any[] = [
+    { imageUrl: 'slide1.jpg', caption: 'Slide 1' },
+    { imageUrl: 'slide2.jpg', caption: 'Slide 2' },
+    { imageUrl: 'slide3.jpg', caption: 'Slide 3' }
+  ];
+  currentSlideIndex = 0;
+
+  nextSlide() {
+    this.currentSlideIndex = (this.currentSlideIndex + 1) % this.slides.length;
+  }
+
+  prevSlide() {
+    this.currentSlideIndex = (this.currentSlideIndex - 1 + this.slides.length) % this.slides.length;
+  }
   counters!: NodeListOf<HTMLDivElement>;
   speed = 200;
 
