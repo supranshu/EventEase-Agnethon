@@ -29,6 +29,10 @@ import { ViewcommitteeComponent } from './pages/viewcommittee/viewcommittee.comp
 import { AddeventsComponent } from './pages/addevents/addevents.component';
 import { Dashboard3Component } from './pages/dashboard3/dashboard3.component';
 import { DevloginComponent } from './pages/devlogin/devlogin.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+
 
 
 @NgModule({
@@ -47,11 +51,12 @@ import { DevloginComponent } from './pages/devlogin/devlogin.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, MatButtonModule,MatIconModule,MatInputModule,MatFormFieldModule,MatSnackBarModule, MatCardModule,MatToolbarModule, MatListModule,MatGridListModule,FormsModule,HttpClientModule, CommonModule, BrowserAnimationsModule, MatSelectModule, MatMenuModule, 
+    AppRoutingModule, MatButtonModule,MatIconModule,MatInputModule,MatFormFieldModule,MatSnackBarModule, MatCardModule,MatToolbarModule, MatListModule,MatGridListModule,FormsModule,HttpClientModule, CommonModule, BrowserAnimationsModule, MatSelectModule, MatMenuModule, MatDatepickerModule, MatNativeDateModule,NgxMaterialTimepickerModule
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    
   ],
   bootstrap: [AppComponent]
 })

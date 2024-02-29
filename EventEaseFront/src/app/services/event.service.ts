@@ -37,4 +37,8 @@ export class EventService {
     return this.http.get<any[]>(`${baseUrl}/approved-events`);
     // Replace '/approved-events' with the appropriate endpoint in your backend
   }
+
+  eventExist(date:string,venue:string){
+    return this.http.get(`${baseUrl}/exist/${date}/${venue}`)
+  }
 }

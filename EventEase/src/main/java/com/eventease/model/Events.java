@@ -1,5 +1,7 @@
 package com.eventease.model;
 
+import java.util.Date;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,8 +14,8 @@ public class Events {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long evId;
 	private String evName;
-	private String comName;
-	private String date;
+	private String comName; 
+	private Date date;
 	private String time;
 	private String venue;
 	private String clgName;
@@ -40,11 +42,15 @@ public class Events {
 	public void setComName(String comName) {
 		this.comName = comName;
 	}
-	public String getDate() {
+	
+	public Date getDate() {
 		return date;
 	}
-	public void setDate(String date) {
+	public void setDate(Date date) {
 		this.date = date;
+	}
+	public String getComment() {
+		return comment;
 	}
 	public String getTime() {
 		return time;
@@ -100,7 +106,7 @@ public class Events {
 				+ time + ", venue=" + venue + ", clgName=" + clgName + ", appPrin=" + appPrin + ", appDean=" + appDean
 				+ ", appHod=" + appHod + ", appMentor=" + appMentor + ", comment=" + comment + "]";
 	}
-	public Events(long evId, String evName, String comName, String date, String time, String venue, String clgName,
+	public Events(long evId, String evName, String comName, Date date, String time, String venue, String clgName,
 			boolean appPrin, boolean appDean, boolean appHod, boolean appMentor, String comment) {
 		super();
 		this.evId = evId;
@@ -120,6 +126,7 @@ public class Events {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 	
 	
 	
