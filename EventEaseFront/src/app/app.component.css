@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     padding: 2rem;
+    background: #000000f8;
     background: #263238;
     color: white;
     letter-spacing: 0.15rem;
@@ -12,6 +13,9 @@
   .footer h1 {
     margin-top: 0; /* Reset default margin */
   }
+  .footer h2{
+    font-weight: 500;
+  }
   
   .footer .left,
   .footer .right {
@@ -21,4 +25,7 @@
   
   .footer .right {
     text-align: right;
+  }
+  
+  
   }
