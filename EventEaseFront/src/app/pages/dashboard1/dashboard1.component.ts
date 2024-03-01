@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { EventService } from '../../services/event.service';
-
-
 
 @Component({
   selector: 'app-dashboard1',
@@ -17,17 +14,18 @@ export class Dashboard1Component implements OnInit {
   constructor(private eventService: EventService, private snack: MatSnackBar) { }
 
   ngOnInit(): void {
-    
     this.fetchEvents();
   }
 
   fetchEvents(): void {
-    
     const collegeName = localStorage.getItem('college');
     if (collegeName) {
       this.eventService.getEventsByCollege(collegeName).subscribe(
         (data) => {
-          this.events = data;
+          this.events = data.map(event => {
+            event.date = this.formatDate(event.date);
+            return event;
+          });
         },
         (error) => {
           console.error('Error fetching events:', error);
@@ -41,7 +39,6 @@ export class Dashboard1Component implements OnInit {
   }
 
   approveEvent(evName: string): void {
-    
     this.eventService.accept(evName).subscribe(
       () => {
         this.snack.open('Event Accepted Successfully', '', { duration: 3000 });
@@ -53,7 +50,6 @@ export class Dashboard1Component implements OnInit {
       }
     );
   }
-  
 
   rejectEvent(evName: any): void {
     this.eventService.reject(evName).subscribe(
@@ -67,4 +63,22 @@ export class Dashboard1Component implements OnInit {
       }
     );
   }
+
+  formatDate(dateString: string): string {
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+
+    // Format: YYYY-MM-DD
+    return `${year}-${month}-${day}`;
+  }
+
+  hasEventEnded(eventDate: string): boolean {
+    const today = new Date();
+    const event = new Date(eventDate);
+    return event < today;
+  }
+
+  
 }

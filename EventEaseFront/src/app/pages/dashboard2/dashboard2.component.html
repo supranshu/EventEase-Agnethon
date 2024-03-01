@@ -17,8 +17,12 @@
         <div class="ag-courses-item_date-box">
           <span class="ag-courses-item_date">Committee Name: {{ event.comName }}</span>
           <br>
-          <span class="ag-courses-item_date">Date: {{ event.date }}</span>
+          <span class="ag-courses-item_date">Date: {{ event.date }} |</span>
+          <span class="ag-courses-item_date" [ngClass]="{ 'ongoing-event': isEventOngoing(event.date), 'ended-event': isEventEnded(event.date) }">
+            {{ isEventOngoing(event.date) ? 'Event Ongoing' : 'Event Ended' }}
+          </span>
           <br>
+          
           <span class="ag-courses-item_date">Time: {{ event.time }}</span>
           <br>
           <span class="ag-courses-item_date">Venue: {{ event.venue }}</span>

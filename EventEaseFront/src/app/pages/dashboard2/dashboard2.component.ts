@@ -18,8 +18,10 @@ export class Dashboard2Component implements OnInit {
     if (comName) {
       this.eventService.getEventsByCommittee(comName).subscribe(
         (data) => {
-          this.events = Object.values(data);
-
+          this.events = Object.values(data).map(event => {
+            event.date = this.formatDate(event.date);
+            return event;
+          });
         },
         (error) => {
           console.error('Error fetching events by committee:', error);
@@ -40,5 +42,32 @@ export class Dashboard2Component implements OnInit {
   rejectEvent(event: any): void {
     // Call the service method to reject the event
     // Update the event's rejection status and refresh the view
+  }
+
+  isEventOngoing(eventDate: string): boolean {
+    const today = new Date();
+    const event = new Date(eventDate);
+  
+    // Compare today's date to the event date
+    return event >= today;
+  }
+  
+  isEventEnded(eventDate: string): boolean {
+    const today = new Date();
+    const event = new Date(eventDate);
+  
+    // Compare today's date to the event date
+    return event < today;
+  }
+  
+  
+  private formatDate(dateString: string): string {
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+
+    // Format: YYYY-MM-DD
+    return `${year}-${month}-${day}`;
   }
 }

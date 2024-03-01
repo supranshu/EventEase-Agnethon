@@ -1,38 +1,35 @@
-
 <header class="header">
   <img src="/assets/EEE.gif" alt="logo" style="width: 120px; height: 120px; margin-right: -30px;">
-  <a  class="logo">EVENTEASE</a>
-  <nav class="navbar">
-      
-      <a routerLink="/addcommittee" >Add Committee</a>
-      <a routerLink="/viewcommittee" >View All Committees</a>
-      <button type="button" routerLink="/"
-          style="margin-left: 100px; background-color: #FC4445; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; text-transform: uppercase;">Logout</button>
-  </nav>  
+  <a class="logo">EVENTEASE</a>
+  <nav class="navbar">    
+    <a routerLink="/addcommittee">Add Committee</a>
+    <a routerLink="/viewcommittee">View All Committees</a>
+    <button type="button" routerLink="/" style="margin-left: 100px; background-color: #FC4445; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; text-transform: uppercase;">Logout</button>
+  </nav> 
 </header>
+
 <section style="background-color: black; height: 100%;">
   <div class="ag-format-container">
     <div class="ag-courses_box">
-        <div *ngFor="let event of events" class="ag-courses_item">
-            <a  class="ag-courses-item_link">
-                <div class="ag-courses-item_bg"></div>
-                <div class="ag-courses-item_title">
-                    <br>{{ event.evName }} BY {{ event.comName }}
-                </div>
-                <div class="ag-courses-item_date-box">
-                    <span class="ag-courses-item_date">{{ event.date }}</span>
-                    <br>
-                    <span class="ag-courses-item_date">{{ event.time }}</span>
-                    <br>
-                    <span class="ag-courses-item_date">AT {{ event.venue }}</span>
-                </div>
-                <br>
-                <button mat-button color="primary" (click)="approveEvent(event.evName)" style="background-color: lightskyblue; color: black;" onmouseover="this.style.backgroundColor='lightgreen';" onmouseout="this.style.backgroundColor='lightskyblue';">Approve</button> 
-                <span style="margin-left: 10px;"></span>
-                <button mat-button color="warn" (click)="rejectEvent(event.evName)" style="background-color: yellow; color: black;" onmouseover="this.style.backgroundColor='lightcoral';" onmouseout="this.style.backgroundColor='yellow';">Reject</button>
-            </a>
-        </div>
+      <div *ngFor="let event of events" class="ag-courses_item" [ngClass]="{ 'hidden': hasEventEnded(event.date) }">
+        <a class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+          <div class="ag-courses-item_title">
+            <br>{{ event.evName }} BY {{ event.comName }}
+          </div>
+          <div class="ag-courses-item_date-box">
+            <span class="ag-courses-item_date">{{ event.date }}</span>
+            <br>
+            <span class="ag-courses-item_date">{{ event.time }}</span>
+            <br>
+            <span class="ag-courses-item_date">AT {{ event.venue }}</span>
+          </div>
+          <br>
+          <button mat-raised-button color="primary" (click)="approveEvent(event.evName)">Approve</button>
+          <span style="margin-left: 10px;"></span>
+          <button mat-raised-button color="warn" (click)="rejectEvent(event.evName)" style="background-color: yellow; color: black;" onmouseover="this.style.backgroundColor='lightcoral';" onmouseout="this.style.backgroundColor='yellow';">Reject</button>
+        </a>
+      </div>
     </div>
   </div>
 </section>
-

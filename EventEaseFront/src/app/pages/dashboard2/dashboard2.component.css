@@ -202,3 +202,11 @@ body
         font-size: 16px;
     }
 }
+.ongoing-event {
+    color: green;
+  }
+  
+  .ended-event {
+    color: red;
+  }
+  
