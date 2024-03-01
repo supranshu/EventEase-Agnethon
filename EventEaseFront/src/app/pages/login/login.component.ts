@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import baseUrl from '../../helper'; // Ensure this import is correct
@@ -10,8 +10,11 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'] // Corrected property name
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
 
+  ngOnInit(): void {
+      localStorage.clear();
+  }
   public loginData={
     name:'',
     password:'',
