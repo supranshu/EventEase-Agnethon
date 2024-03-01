@@ -1,16 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import baseUrl from '../../helper';
+import { loadavg } from 'os';
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
-export class SignupComponent {
+export class SignupComponent implements OnInit {
 
+  ngOnInit(): void {
+      localStorage.clear()
+  }
   public user = {
     name: '',
     password: '',
