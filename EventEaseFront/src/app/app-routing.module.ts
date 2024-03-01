@@ -11,6 +11,8 @@ import { AddeventsComponent } from './pages/addevents/addevents.component';
 
 import { Dashboard3Component } from './pages/dashboard3/dashboard3.component';
 import { DevloginComponent } from './pages/devlogin/devlogin.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { AboutComponent } from './pages/about/about.component';
 
 const routes: Routes = [
   {
@@ -61,6 +63,16 @@ const routes: Routes = [
   {
     path:'devlogin',
     component:DevloginComponent,
+    pathMatch:'full'
+  },
+  {
+    path:'contact',
+    component:ContactComponent,
+    pathMatch:'full'
+  },
+  {
+    path:'about',
+    component:AboutComponent,
     pathMatch:'full'
   }
 ];

@@ -32,6 +32,8 @@ import { DevloginComponent } from './pages/devlogin/devlogin.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { ContactComponent } from './pages/contact/contact.component';
+import { AboutComponent } from './pages/about/about.component';
 
 
 
@@ -48,6 +50,8 @@ import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
     AddeventsComponent,
     Dashboard3Component,
     DevloginComponent,
+    ContactComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
