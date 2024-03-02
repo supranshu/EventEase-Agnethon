@@ -9,3 +9,4 @@ import com.eventease.model.College;
 public interface CollegeRepo extends JpaRepository<College, Long> {
 
 }
+ 

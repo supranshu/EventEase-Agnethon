@@ -10,14 +10,14 @@ public class College {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private String clgId;
+	private long clgId;
 	private String city;
 	private String state;
 	private String country;
-	public String getClgId() {
+	public long getClgId() {
 		return clgId;
 	}
-	public void setClgId(String clgId) {
+	public void setClgId(long clgId) {
 		this.clgId = clgId;
 	}
 	public String getCity() {
@@ -42,7 +42,7 @@ public class College {
 	public String toString() {
 		return "College [clgId=" + clgId + ", city=" + city + ", state=" + state + ", country=" + country + "]";
 	}
-	public College(String clgId, String city, String state, String country) {
+	public College(long clgId, String city, String state, String country) {
 		super();
 		this.clgId = clgId;
 		this.city = city;
